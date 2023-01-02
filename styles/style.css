@@ -212,17 +212,17 @@ font-style: normal;
     cursor: pointer;
 }
 
-.projects__list .active {
-    color: #E3B873;
-    text-decoration: underline;
-}
-
 .projects__list-item {
     color: rgba(255, 255, 255, .3);
     text-transform: uppercase;
     font-size: 14px;
     line-height: 1.39;
     font-family: 'Yeseva One';
+}
+
+.projects__list-item.active  {
+    color: #E3B873;
+    text-decoration: underline;
 }
 
 .projects__list-item:not(:last-child) {
@@ -270,11 +270,6 @@ font-style: normal;
 
 .projects__nav img {
     cursor: pointer;
-}
-
-.projects__nav-dotts {
-    display: flex;
-    margin: 0 30px 416px 30px;
 }
 
 .projects__nav-dotts li:not(:last-child) {
@@ -1318,4 +1313,29 @@ width: 376px;
     }
 }
 
+.sliderImage {
+    display: none;
+}
 
+.sliderImage.active {
+    display: block;
+}
+
+.projects__nav-dots {
+    display: flex;
+    margin: 0 30px 416px 30px;
+}
+
+.projects__nav-dots__item {
+    width: 10px;
+  height: 10px;
+  background:  rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.projects__nav-dots__item:hover, .projects__nav-dots__item.active {
+    background: #FFFFFF;
+  }
